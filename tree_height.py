@@ -1,38 +1,29 @@
 # python3
-
 import sys
 import threading
 
-def listOfDupes(seq, item):
-    start = -1
-    locs = []
-    while True:
-        try:
-            loc = seq.index(item, start+1)
-        except:
-            break
-        else:
-            locs.append(loc)
-            start = loc
-    return locs
-
 
 def compute_height(n, parents):
-    if node not in parents:
-        return 1
-    else:
-        return 1 + max(compute_height(i, parents) for i in listOfDupes(parents, node))
-
+    n = input()
+      n.value = parents  
+      n.left = None
+      n.right = None
     # Write this function
-    #max_height = 0
-    # Your code here
-    #return max_height
+    max_height = 0
+    leftDepth = maxDepth(n.left)
+    rightDepth = maxDepth(n.right)
+
+    if leftDepth > rightDepth:
+       return leftDepth + 1
+    else:
+       return rightDepth + 1
+    # Your code 
+    if n is None
+    return max_height
 
 
 def main():
-    n = int(input())
-    parents = list(map(int, input().split()))
-    print(compute_height(parents.index(-1), parents))
+
     # implement input form keyboard and from files
     
     # let user input file name to use, don't allow file names with letter a
