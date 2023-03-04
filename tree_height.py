@@ -11,7 +11,7 @@ def compute_height(n, parents):
          if parents[k] == -1:
             sakne = k 
          else:
-            f[parents[k]].append(i)
+            f[parents[k]].append(k)
 
 
 
