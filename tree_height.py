@@ -5,13 +5,13 @@ import numpy
 
 
 def compute_height(n, parents):
-     sakne = None
-     f = [[]for i in range(n)]
-     for k in range(n):
-         if parents[k] == -1:
-            sakne = k 
-         else:
-            f[parents[k]].append(k)
+    sakne = None
+    f = [[]for i in range(n)]
+    for k in range(n):
+        if parents[k] == -1:
+          sakne = k 
+        else:
+          f[parents[k]].append(k)
 
 
 
@@ -19,7 +19,7 @@ def compute_height(n, parents):
     def max_height(o):
         augstums = 1 
         if not f[o]:
-             return augstums
+            return augstums
         else:
             for child in f[o]:
                 augstums = max(augstums, max_height(child))
